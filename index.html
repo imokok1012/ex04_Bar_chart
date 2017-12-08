@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>D3 Course</title>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+
+<body>
+  
+     
+
+  </svg>
+  <script>
+        //在這裡寫D3
+      var svg = d3.select("body").append("svg").attr({width:600,height:1000})  
+      for (var i=0;i<10;i++){
+          var num =random(20,300);
+          svg.append("rect").attr({x:10,y:10+15*i,width:num,height:10,fill:"red"})
+           svg.append("text").attr({x: num+15,y: 20+15*i,"font-size": 12 }).text(num);
+      }
+      function random(N,M){
+          return Math.floor(Math.random()*(M-N+1)+N)
+      }
+      
+  </script>
+
+</body>
+
+</html>
